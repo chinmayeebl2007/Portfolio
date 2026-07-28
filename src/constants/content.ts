@@ -21,7 +21,7 @@ export const PORTFOLIO_CONTENT = {
 
   profileImage: "/Profileimage.jpeg",
 
-  resumeUrl: "/UpdatedResume.pdf",
+  resumeUrl: "/Updated_Resume.pdf",
 
   stats: [
     {
