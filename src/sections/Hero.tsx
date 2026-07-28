@@ -1,5 +1,11 @@
 import { motion } from "motion/react";
-import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ArrowRight,
+  Calendar,
+} from "lucide-react";
 import { PORTFOLIO_CONTENT } from "@/src/constants/content";
 import { Button } from "@/src/components/ui/Button";
 
@@ -35,7 +41,6 @@ const Particle = ({ i }: { i: number }) => {
 export const Hero = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center pt-20 overflow-hidden">
-
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 -left-20 w-96 h-96 bg-indigo-600/10 rounded-full blur-[120px]" />
@@ -47,9 +52,7 @@ export const Hero = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-
         <div className="flex flex-col items-center text-center">
-
           {/* Available Badge */}
           <motion.div
             initial={{ opacity: 0, y: -10 }}
@@ -121,9 +124,22 @@ export const Hero = () => {
             <Button
               variant="secondary"
               size="lg"
-              onClick={() => window.open("/UpdatedResume.pdf", "_blank")}
+              onClick={() =>
+                window.open(PORTFOLIO_CONTENT.resumeUrl, "_blank")
+              }
             >
               RESUME
+            </Button>
+
+            <Button
+              variant="secondary"
+              size="lg"
+              icon={<Calendar size={18} />}
+              onClick={() =>
+                window.open(PORTFOLIO_CONTENT.booking, "_blank")
+              }
+            >
+              BOOK A MEETING
             </Button>
           </motion.div>
 
@@ -154,9 +170,7 @@ export const Hero = () => {
               <Mail size={24} />
             </a>
           </motion.div>
-
         </div>
-
       </div>
     </section>
   );

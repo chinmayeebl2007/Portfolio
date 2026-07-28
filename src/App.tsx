@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
 import { CustomCursor } from "@/src/components/ui/CustomCursor";
 import { BackToTop } from "@/src/components/ui/BackToTop";
+import { FutureWork } from "./sections/FutureWork";
 
 const LoadingScreen = () => (
   <motion.div
@@ -74,6 +75,7 @@ export default function App() {
         <Skills />
         <Projects />
         <Experience />
+        <FutureWork />
         <Contact />
       </main>
 

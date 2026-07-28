@@ -5,8 +5,10 @@ export const PORTFOLIO_CONTENT = {
   email: "chinmayeebl27@gmail.com",
   phone: "+91 7676032028",
   location: "Bangalore, India",
-  github: "https://github.com",
+  github: "https://github.com/chinmayeebl2007",
   linkedin: "https://www.linkedin.com/in/chinmayee-b-l-2160b2366",
+  booking:
+  "https://calendar.app.google/GbFLzy9z8bTguzcq9",
   profileImage: "/Profileimage.jpeg",
   resumeUrl: "/UpdatedResume.pdf",
   
