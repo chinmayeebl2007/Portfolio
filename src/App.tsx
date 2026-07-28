@@ -1,14 +1,22 @@
 import { Navbar } from "@/src/components/layout/Navbar";
 import { Footer, ScrollProgress } from "@/src/components/layout/Footer";
+
 import { Hero } from "@/src/sections/Hero";
 import { About, Skills } from "@/src/sections/About";
 import { Projects } from "@/src/sections/Projects";
 import { Experience, Contact } from "@/src/sections/Contact";
-import { motion, AnimatePresence } from "motion/react";
-import { useEffect, useState } from "react";
+
+import { FutureWork } from "./sections/FutureWork";
+import { CurrentlyWorking } from "./sections/CurrentlyWorking";
+import { Services } from "./sections/Services";
+import { Certifications } from "./sections/Certifications";
+import { Timeline } from "./sections/Timeline";
+
 import { CustomCursor } from "@/src/components/ui/CustomCursor";
 import { BackToTop } from "@/src/components/ui/BackToTop";
-import { FutureWork } from "./sections/FutureWork";
+
+import { motion, AnimatePresence } from "motion/react";
+import { useEffect, useState } from "react";
 
 const LoadingScreen = () => (
   <motion.div
@@ -72,11 +80,17 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <Services />
+        <CurrentlyWorking />
         <Skills />
         <Projects />
+        <Certifications />
+        <Timeline />
         <Experience />
         <FutureWork />
         <Contact />
+       <BackToTop />
+        <Footer />
       </main>
 
       <Footer />
