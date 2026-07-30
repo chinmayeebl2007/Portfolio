@@ -92,8 +92,6 @@ export default function App() {
        <BackToTop />
         <Footer />
       </main>
-
-      <Footer />
       
       {/* Background Glows */}
       <div className="fixed inset-0 -z-10 pointer-events-none">
