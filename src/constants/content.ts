@@ -85,6 +85,13 @@ projects: [
 
     image: "/projects/Jobbridge.png",
 
+    gallery: [
+      "/projects/Resumeuploadpage.png",
+      "/projects/Resumeans.png",
+      "/projects/Jobsfound.png",
+      "/projects/Deploypage.png",
+    ],
+
     description:
       "An AI-powered resume analyzer and job matching platform that leverages Google's Gemini API to provide resume insights and personalized job recommendations.",
 
@@ -117,6 +124,13 @@ projects: [
     status: "Full Stack",
 
     image: "/projects/Lostnfound.png",
+
+    gallery: [
+      "/projects/Loginpage.png",
+      "/projects/ReportPage.png",
+      "/projects/ItemReport.png",
+      "/projects/Itemreturn.png",
+    ],
 
     description:
       "A full-stack web application that streamlines reporting, searching, and claiming lost and found items through a secure and user-friendly interface.",
@@ -151,6 +165,13 @@ projects: [
 
     image: "/projects/ragx.png",
 
+    gallery: [
+      "/projects/ragxpage1.png",
+      "/projects/raggraph.png",
+      "/projects/facepage.png",
+      "/projects/Historypage.png",
+    ],
+
     description:
       "An AI-powered Retrieval-Augmented Generation (RAG) platform that enables intelligent question answering from telecom documents using Google's Gemini model.",
 
@@ -176,7 +197,6 @@ projects: [
     demo: "#",
   },
 ],
-
   experience: [
     {
       College: "M. S. Ramaiah Institute of Technology",

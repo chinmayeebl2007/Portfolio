@@ -11,6 +11,12 @@ interface ButtonProps {
   icon?: ReactNode;
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
+
+  // NEW
+  href?: string;
+  download?: boolean | string;
+  target?: "_blank" | "_self";
+  rel?: string;
 }
 
 export const Button = ({
@@ -22,6 +28,12 @@ export const Button = ({
   icon,
   type = "button",
   disabled = false,
+
+  // NEW
+  href,
+  download,
+  target,
+  rel,
 }: ButtonProps) => {
   const variants = {
     primary:
@@ -38,6 +50,33 @@ export const Button = ({
     lg: "px-8 py-4 text-lg font-semibold",
   };
 
+  const classes = cn(
+    "relative inline-flex items-center justify-center gap-2 rounded-full transition-all duration-300",
+    variants[variant],
+    sizes[size],
+    disabled ? "opacity-60 cursor-not-allowed" : "cursor-pointer",
+    className
+  );
+
+  // Render as <a> if href is provided
+  if (href) {
+    return (
+      <motion.a
+        whileHover={disabled ? {} : { scale: 1.02 }}
+        whileTap={disabled ? {} : { scale: 0.98 }}
+        href={href}
+        download={download}
+        target={target}
+        rel={rel}
+        className={classes}
+      >
+        {children}
+        {icon && <span className="text-xl">{icon}</span>}
+      </motion.a>
+    );
+  }
+
+  // Otherwise render as <button>
   return (
     <motion.button
       whileHover={disabled ? {} : { scale: 1.02 }}
@@ -45,15 +84,7 @@ export const Button = ({
       type={type}
       disabled={disabled}
       onClick={onClick}
-      className={cn(
-        "relative inline-flex items-center justify-center gap-2 rounded-full transition-all duration-300",
-        variants[variant],
-        sizes[size],
-        disabled
-          ? "opacity-60 cursor-not-allowed"
-          : "cursor-pointer",
-        className
-      )}
+      className={classes}
     >
       {children}
       {icon && <span className="text-xl">{icon}</span>}

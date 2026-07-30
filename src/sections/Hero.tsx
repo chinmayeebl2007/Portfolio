@@ -5,6 +5,7 @@ import {
   Mail,
   ArrowRight,
   Calendar,
+  FileDown,
 } from "lucide-react";
 import { PORTFOLIO_CONTENT } from "@/src/constants/content";
 import { Button } from "@/src/components/ui/Button";
@@ -122,15 +123,14 @@ export const Hero = () => {
             </Button>
 
             <Button
-              variant="secondary"
-              size="lg"
-              onClick={() =>
-                window.open(PORTFOLIO_CONTENT.resumeUrl, "_blank")
-              }
-            >
-              RESUME
-            </Button>
-
+  variant="secondary"
+  size="lg"
+  href={PORTFOLIO_CONTENT.resumeUrl}
+  download="Chinmayee_BL_Resume.pdf"
+  icon={<FileDown size={18} />}
+>
+  DOWNLOAD RESUME
+</Button>
             <Button
               variant="secondary"
               size="lg"
